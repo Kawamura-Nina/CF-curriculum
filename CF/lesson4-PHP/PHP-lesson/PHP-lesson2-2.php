@@ -36,6 +36,52 @@
 
     //この下に記述してください
 
+
+//計算の関数
+function calculateChange($price) {
+
+    //おつりの計算
+    $change = 20000 - $price;
+
+    //金額の連想配列
+    $denominations = [
+        5000 => "五千円札",
+        1000 => "千円札",
+        500 => "五百円玉",
+        100 => "百円玉",
+        50 => "五十円玉",
+        10 => "十円玉",
+        5 => "五円玉",
+        1 => "一円玉"
+    ];
+
+    $changeDetails = [];
+
+    foreach ($denominations as $value => $name) {
+        $count = floor($change / $value);
+        if ($count > 0) {
+            $changeDetails[$name] = $count;
+            $change -= $count * $value;
+        }
+    }
+
+    return $changeDetails;
+}
+
+// 商品の値段を設定
+$price = 4000;
+
+// おつりの計算
+$changeDetails = calculateChange($price);
+
+echo "商品の値段：{$price}円\n\n";
+echo "おつり内訳\n";
+
+foreach ($changeDetails as $denomination => $count) {
+    echo "{$denomination}　{$count}枚\n";
+}
+
+
     
 ?>
 <div>

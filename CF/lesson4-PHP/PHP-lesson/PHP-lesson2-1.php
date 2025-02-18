@@ -60,6 +60,36 @@
 
     //この下に記述してください
 
+//うるう年判定する関数
+function isLeapYear($year) {
+
+    //うるう年の条件
+    //1. 4で割り切れる年はうるう年
+    //2. ただし、100で割り切れる年はうるう年ではない
+    //3. ただし、400で割り切れる年はうるう年
+    if ($year % 400 == 0) {
+        return true;
+    } elseif ($year % 100 == 0) {
+        return false;
+    } elseif ($year % 4 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//現在の年を取得
+$currentYear = date('Y');
+
+//1900年～現在の年のループ
+for ($year = 1900; $year <= $currentYear; $year++) {
+    //うるう年判定の結果取得
+    if (isLeapYear($year)) {
+        echo "{$year}年はうるう年です。\n";
+    } else {
+        echo "{$year}年はうるう年ではありません。\n";
+    }
+}
     
 ?>
 <div>

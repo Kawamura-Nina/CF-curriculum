@@ -52,7 +52,60 @@
     
 
     //この下に記述してください
-
+    
+      // ランダムに2枚ずつカードを配る
+      for ($i = 0; $i < 2; $i++) {
+        $player[] = $cards[array_rand($cards)];
+        $opponent[] = $cards[array_rand($cards)];
+      }
+    
+      // ポイント計算関数
+      function calculateScore($hand) {
+        $score = 0;
+        $aceCount = 0;
+    
+        foreach ($hand as $card) {
+          if ($card === "A") {
+            $aceCount++;
+            $score += 11;
+          } elseif (in_array($card, ["J", "Q", "K"])) {
+            $score += 10;
+          } else {
+            $score += $card;
+          }
+        }
+    
+        // エースの処理。21点を超える場合は1点として扱う
+        while ($score > 21 && $aceCount > 0) {
+          $score -= 10;
+          $aceCount--;
+        }
+    
+        return $score;
+      }
+    
+      // 点数の計算
+      $playerScore = calculateScore($player);
+      $opponentScore = calculateScore($opponent);
+    
+      // 出力
+      echo "自分：" . $playerScore . "点　対戦相手：" . $opponentScore . "点 ";
+    
+      // 勝敗判定
+      if ($playerScore > 21 || ($opponentScore > $playerScore && $opponentScore <= 21)) {
+        echo "勝敗：あなたの負けです。";
+      } elseif ($opponentScore > 21 || $playerScore > $opponentScore || $playerScore == 21) {
+        if ($playerScore == 21 && count($player) == 2) {
+          echo "勝敗：ブラックジャック！あなたの勝ちです。";
+        } else {
+          echo "勝敗：あなたの勝ちです。";
+        }
+      } else {
+        echo "勝敗：引き分けです。";
+      }
+    
+    
+    blackJack();
     
     ?>
 <div>
