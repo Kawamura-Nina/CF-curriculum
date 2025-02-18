@@ -20,6 +20,52 @@
         ④１〜２００までの数字で2の倍数かつ、５の倍数である数字だけをコンソールに出力させて下さい。
         */
 
+        //①１〜１００までの数字がコンソールに出力させて下さい。
+
+        //number1を1で初期化、number1が100以下の間繰り返す、1ループ終了したら1加算
+        for (let number1 = 1; number1 <= 100; number1 ++) {
+
+            //number1表示
+            console.log(number1);
+        }
+        //②１〜１００までの数字で50〜80までの数字だけコンソールに出力させて下さい。
+
+        //number2を1で初期化、number2が100以下の間繰り返す、1ループ終了したら1加算
+        for (let number2 = 1; number2 <= 100; number2 ++) {
+
+            //number2が50以上且つnumber2が80以上か判別
+            if (number2 >= 50 && number2 <= 80) {
+
+                //number2表示
+                console.log(number2);
+            }
+        }
+        //③１〜１００までの数字で2の倍数の数字だけ、コンソールに出力させて下さい。例、２、４、６、８・・・
+
+        //number3を1で初期化、number3が100以下の間繰り返す、1ループ終了したら1加算
+        for (let number3 = 1; number3 <= 100; number3 ++) {
+
+            //number3を2で割ったあまりが0か判別
+            if (number3 % 2 == 0) {
+
+                //number3表示
+                console.log(number3);
+            }
+        }
+        //④１〜２００までの数字で2の倍数かつ、５の倍数である数字だけをコンソールに出力させて下さい。
+
+        //number4を1で初期化、number4が200以下の間繰り返す、1ループ終了したら1加算
+        for (let number4 = 1; number4 <= 200; number4 ++) {
+
+            //number4を2で割ったあまりが0且つnumber5を5で割ったあまりが0か判別
+            if (number4 % 2 == 0 && number4 % 5 == 0) {
+
+                //number4表示
+                console.log(number4);
+            }
+        }
+      
+
     </script>
 </body>
 </html>

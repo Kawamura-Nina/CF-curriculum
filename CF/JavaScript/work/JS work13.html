@@ -19,6 +19,45 @@
          ③20〜２００までの数字で2の倍数かつ、５の倍数である数字だけをコンソール表示する関数「number()」を定義して、それを呼び出して下さい。
         */
 
+        //①コンソールに、「こんにちは」とコンソール表示される関数「sayHello()」を定義し、それを呼び出して下さい。
+        // 関数を定義
+        function sayHello() {
+            console.log("こんにちは");
+        }
+        // 関数を呼び出し
+        sayHello();
+
+        //②コンソールに、1~100までの数字がコンソール表示される関数「hundred()」を定義して、それを呼び出して下さい。
+        // 関数を定義
+        function hundred() {
+            //number1を1で初期化、number1が100以下の間繰り返す、1ループ終了したら1加算
+            for (let number1 = 1; number1 <= 100; number1++) {
+
+                //number1表示
+                console.log(number1);
+            }
+        }
+        // 関数を呼び出し
+        hundred();
+
+        //③20〜２００までの数字で2の倍数かつ、５の倍数である数字だけをコンソール表示する関数「number()」を定義して、それを呼び出して下さい。
+        // 関数を定義
+        function number() {
+
+            //number2を20で初期化、number2が200以下の間繰り返す、1ループ終了したら1加算
+            for (let number2 = 20; number2 <= 200; number2++) {
+
+                //number2を2で割ったあまりが0且つnumber2を5で割ったあまりが0か判別
+             if (number2 % 2 == 0 && number2 % 5 == 0) {
+
+                //number2表示
+                 console.log(number2);
+                }
+            }
+        }
+        // 関数を呼び出し
+        number();
+
     </script>
 </body>
 </html>

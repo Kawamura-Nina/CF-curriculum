@@ -15,6 +15,20 @@
         をする引数「age」をもつ関数「Check」を宣言し。
         その後、関数「Check」を好きな引数を設定し実行して、返り値がコンソール出力されるようにしてください。*/
 
+        function Check (age){
+            //ageが20以上か判別
+            if(age >=20){
+                //20以上の場合
+                return '飲酒喫煙できます。'
+            }
+            else{
+                //20未満の場合
+                return '飲酒喫煙できません。'
+            }
+        }
+        console.log(Check(25)); //age=25の場合
+        console.log(Check(18)); //age=18の場合
+
     </script>
 </body>
 </html>
