@@ -22,5 +22,5 @@ function Area(width, height) {
     }
   }
 
-  let result = Area(9,4);
+  let result = Area(8,4);
   console.log(result);

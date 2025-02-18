@@ -5,7 +5,7 @@ const man = {
     favorite: '刺身',
   };
   
-
+console.log(man)
   const human = {
     anime: {
       man: {

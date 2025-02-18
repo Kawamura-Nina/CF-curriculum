@@ -45,3 +45,4 @@ function tamagoyaki() {
   tamagoyaki();
 
   //この様に非常に簡単でコードの数が少なくなるのもあり、見やすくなる。
+  tamagoyaki()
