@@ -1,0 +1,62 @@
+body{
+    background-color: #2F4F4F;
+    color: white;
+}
+.content{
+    display: flex;
+}
+.annotation{
+    list-style: none;
+}
+.emphasis1{
+    color: aqua;
+}
+.emphasis2{
+    color: palevioletred;
+}
+.emphasis3{
+    color: yellow;
+}
+main{
+    width: 75%;  
+}
+.maincontents{
+    margin-right: auto;
+    margin-left: 7%;
+}
+aside{
+    width: 21.3%;
+    height: 870px;
+    border: 1px solid white;
+    background-color: #708090;
+    padding: 1%;
+    
+}
+h3{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.fortop{
+    text-align: right;
+}
+h6{
+    text-align: center;
+}
+.toc {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+hr{
+    width: 47%;
+}
+.toc li{
+    text-align: center;
+    padding-right: 3%;
+}
+.annotation li{
+    list-style: none;
+}
